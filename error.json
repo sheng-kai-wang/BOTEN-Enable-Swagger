@@ -30,7 +30,7 @@
 	},
 	"servers": [
 		{
-			"url": "https://api.error.com"
+			"url": "https://api.foursquare.com"
 		}
 	],
 	"paths": {
@@ -105,7 +105,13 @@
 				],
 				"x-chatbotFlow": [
 					{
-						"flowName": "suggeastVenues"
+						"flowName": "suggeastVenues",
+						"responseToSlots": [
+							{
+								"parameterName": "VENUE_ID",
+								"jsonPath": "$.response.minivenues[*].id"
+							}
+						]
 					}
 				],
 				"x-bot-utter": [
@@ -252,12 +258,16 @@
 							{
 								"in": "path",
 								"parameterName": "VENUE_ID",
-								"type": "e"
+								"type": "Single"
 							}
 						]
 					}
 				],
 				"x-bot-utter": [
+					{
+						"parameterName": "client_id",
+						"utter": "What's your' client_id?"
+					},
 					{
 						"parameterName": "client_secret",
 						"utter": "What's your' client_secret?"
