@@ -116,6 +116,10 @@
 				],
 				"x-bot-utter": [
 					{
+						"parameterName": "query",
+						"utter": "What do you want to query?"
+					},
+					{
 						"parameterName": "limit",
 						"utter": "How many limits do you want to set?"
 					},
