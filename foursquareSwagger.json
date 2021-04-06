@@ -98,11 +98,6 @@
 						"description": "Auto generated using Swagger Inspector"
 					}
 				},
-				"servers": [
-					{
-						"url": "https://api.foursquare.com"
-					}
-				],
 				"x-chatbotFlow": [
 					{
 						"flowName": "suggeastVenues",
@@ -197,12 +192,7 @@
 						}
 					]
 				}
-			},
-			"servers": [
-				{
-					"url": "https://api.foursquare.com"
-				}
-			]
+			}
 		},
 		"/v2/venues/{VENUE_ID}": {
 			"get": {
@@ -250,11 +240,6 @@
 						"description": "Auto generated using Swagger Inspector"
 					}
 				},
-				"servers": [
-					{
-						"url": "https://api.foursquare.com"
-					}
-				],
 				"x-chatbotFlow": [
 					{
 						"flowName": "suggeastVenues",
@@ -332,15 +317,7 @@
 						}
 					]
 				}
-			},
-			"servers": [
-				{
-					"url": "https://api.foursquare.com"
-				}
-			]
+			}
 		}
-	},
-	"components": {
-		
 	}
 }
