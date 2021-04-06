@@ -247,7 +247,7 @@
 							{
 								"in": "path",
 								"parameterName": "VENUE_ID",
-								"type": "Single"
+								"type": "Multiple"
 							}
 						]
 					}
