@@ -1,7 +1,7 @@
 {
 	"openapi": "3.0.1",
 	"info": {
-		"title": "err",
+		"title": "defaultTitle",
 		"description": "defaultDescription",
 		"version": "0.1",
 		"x-chatbotFlow": [
@@ -29,7 +29,7 @@
 	},
 	"servers": [
 		{
-			"url": "https://api.err.com"
+			"url": "https://api.foursquare.com"
 		}
 	],
 	"paths": {
@@ -178,7 +178,20 @@
 							"25.129253,121.736299"
 						]
 					}
-				]
+				],
+				"x-bot-jsonpPath-result": {
+					"item": 5,
+					"result": [
+						{
+							"title": "name",
+							"jsonPath": "$.response.minivenues[*].name"
+						},
+						{
+							"title": "address",
+							"jsonPath": "$.response.minivenues[*].location.address"
+						}
+					]
+				}
 			},
 			"servers": [
 				{
@@ -313,5 +326,8 @@
 				}
 			]
 		}
+	},
+	"components": {
+		
 	}
 }
