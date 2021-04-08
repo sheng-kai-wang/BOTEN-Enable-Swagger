@@ -139,7 +139,7 @@
           "utter" : "What's your' api_key?"
         }, {
           "parameterName" : "movie_id",
-          "utter" : "What language do you want to search?"
+          "utter" : "What movie_id do you want to search?"
         }],
         "x-user-entity" : [ {
           "parameterName" : "api_key",
