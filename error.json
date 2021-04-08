@@ -8,7 +8,7 @@
 			{
 				"flowName": "suggeastVenues",
 				"flow": [
-					"/v2/venues/suggestcompletion"
+					"/v2/venues/suggestcompleti"
 				]
 			}
 		],
