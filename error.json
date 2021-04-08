@@ -8,8 +8,7 @@
 			{
 				"flowName": "suggeastVenues",
 				"flow": [
-					"/v2/venues/suggestcompletion",
-					"/v2/venues/{VENUE_ID}"
+					"/v2/venues/suggestcompletion"
 				]
 			}
 		],
@@ -115,10 +114,6 @@
 					}
 				],
 				"x-bot-utter": [
-					{
-						"parameterName": "query",
-						"utter": "What do you want to query?"
-					},
 					{
 						"parameterName": "limit",
 						"utter": "How many limits do you want to set?"
