@@ -113,6 +113,28 @@
 						]
 					}
 				],
+				"x-bot-utter": [
+					{
+						"parameterName": "limit",
+						"utter": "How many limits do you want to set?"
+					},
+					{
+						"parameterName": "client_id",
+						"utter": "What's your' client_id?"
+					},
+					{
+						"parameterName": "client_secret",
+						"utter": "What's your' client_secret?"
+					},
+					{
+						"parameterName": "v",
+						"utter": "What is the version?"
+					},
+					{
+						"parameterName": "ll",
+						"utter": "What is the latitude and longitude ?"
+					}
+				],
 				"x-user-entity": [
 					{
 						"parameterName": "query",
