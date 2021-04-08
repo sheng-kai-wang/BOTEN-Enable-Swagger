@@ -178,20 +178,7 @@
 							"25.129253,121.736299"
 						]
 					}
-				],
-				"x-bot-jsonpPath-result": {
-					"item": 5,
-					"result": [
-						{
-							"title": "name",
-							"jsonPath": "$.response.minivenues[*].name"
-						},
-						{
-							"title": "address",
-							"jsonPath": "$.response.minivenues[*].location.address"
-						}
-					]
-				}
+				]
 			},
 			"servers": [
 				{
