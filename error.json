@@ -1,7 +1,7 @@
 {
 	"openapi": "3.0.1",
 	"info": {
-		"title": "defaultTitle",
+		"title": "err",
 		"description": "defaultDescription",
 		"version": "0.1",
 		"x-chatbotFlow": [
@@ -29,7 +29,7 @@
 	},
 	"servers": [
 		{
-			"url": "https://api.foursquare.com"
+			"url": "https://api.err.com"
 		}
 	],
 	"paths": {
@@ -326,8 +326,5 @@
 				}
 			]
 		}
-	},
-	"components": {
-		
 	}
 }
