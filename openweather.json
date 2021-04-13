@@ -115,7 +115,7 @@
         ],
         "x-chatbotFlow": [
           {
-            "flowName": "getWeather"
+            "flowName": "openweather"
           }
         ],
         "x-bot-utter": [
@@ -268,7 +268,7 @@
         ],
         "x-chatbotFlow": [
           {
-            "flowName": "getWeatherBBox"
+            "flowName": "openweather"
           }
         ],
         "x-bot-utter": [
@@ -404,7 +404,7 @@
         ],
         "x-chatbotFlow": [
           {
-            "flowName": "getWeatherInCircle"
+            "flowName": "openweather"
           }
         ],
         "x-bot-utter": [
