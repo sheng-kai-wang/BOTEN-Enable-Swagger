@@ -1,0 +1,492 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "defaultTitle",
+    "description": "defaultDescription",
+    "version": "0.1",
+    "x-chatbotFlow": [
+      {
+        "flowName": "openweather",
+        "flow": [
+          "/data/2.5/weather",
+          "/data/2.5/box/city",
+          "/data/2.5/box/find"
+        ]
+      }
+    ],
+    "x-input-template": {
+      "useEndpoint": [
+        "I want to get ${pathName}",
+        "I want to use ${pathName}"
+      ],
+      "parameterList": [
+        "I want to see the ${pathName} parameters list",
+        "${pathName} parameters list"
+      ],
+      "fillParameter": [
+        "Fill in the ${pathName}",
+        "Fill ${pathName}"
+      ]
+    }
+  },
+  "servers": [
+    {
+      "url": "http://api.openweathermap.org"
+    }
+  ],
+  "paths": {
+    "/data/2.5/weather": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "keelung"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "cd46382fd7d243f1add70fbef4bdee84"
+          },
+          {
+            "name": "lon",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "121.742"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1678228"
+          },
+          {
+            "name": "lat",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "25.128"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://api.openweathermap.org"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "getWeather"
+          }
+        ],
+        "x-bot-utter": [
+          {
+            "parameterName": "q",
+            "utter": "Where do you want to query?"
+          },
+          {
+            "parameterName": "appid",
+            "utter": "What is your API key?"
+          },
+          {
+            "parameterName": "lon",
+            "utter": "What longitude do you want to query?"
+          },
+          {
+            "parameterName": "lat",
+            "utter": "What latitude do you want to query?"
+          },
+          {
+            "parameterName": "id",
+            "utter": "What city id do you want to query?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "q",
+            "entityValue": [
+              "Keelung",
+              "Taipei"
+            ]
+          },
+          {
+            "parameterName": "appid",
+            "entityValue": [
+              "cd46382fd7d243f1add70fbef4bdee84"
+            ]
+          },
+          {
+            "parameterName": "lat",
+            "entityValue": [
+              "25.128"
+            ]
+          },
+          {
+            "parameterName": "lon",
+            "entityValue": [
+              "121.742"
+            ]
+          },
+          {
+            "parameterName": "id",
+            "entityValue": [
+              "1678228"
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 1,
+          "result": [
+            {
+              "title": "weather",
+              "jsonPath": "$.weather[*].main"
+            },
+            {
+              "title": "weatherDescribe",
+              "jsonPath": "$.weather[*].description"
+            },
+            {
+              "title": "visibility",
+              "jsonPath": "$.visibility"
+            },
+            {
+              "title": "temp",
+              "jsonPath": "$.main.temp"
+            },
+            {
+              "title": "tempMin",
+              "jsonPath": "$.main.temp_min"
+            },
+            {
+              "title": "tempMax",
+              "jsonPath": "$.main.temp_max"
+            },
+            {
+              "title": "sunrise",
+              "jsonPath": "$.sys.sunrise"
+            },
+            {
+              "title": "sunset",
+              "jsonPath": "$.sys.sunset"
+            },
+            {
+              "title": "place",
+              "jsonPath": "$.name"
+            }
+          ]
+        }
+      },
+      "servers": [
+        {
+          "url": "http://api.openweathermap.org"
+        }
+      ]
+    },
+    "/data/2.5/box/city": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "bbox",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "121.25,24.8,121.95,25.3,10"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "cd46382fd7d243f1add70fbef4bdee84"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://api.openweathermap.org"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "getWeatherBBox"
+          }
+        ],
+        "x-bot-utter": [
+          {
+            "parameterName": "bbox",
+            "utter": "Where do you want to query(bounding box [lon-left,lat-bottom,lon-right,lat-top,zoom])?"
+          },
+          {
+            "parameterName": "appid",
+            "utter": "What is your API key?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "bbox",
+            "entityValue": [
+              "121.25,24.8,121.95,25.3,10"
+            ]
+          },
+          {
+            "parameterName": "appid",
+            "entityValue": [
+              "cd46382fd7d243f1add70fbef4bdee84"
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "weather",
+              "jsonPath": "$.list[*].weather[*].main"
+            },
+            {
+              "title": "weatherDescribe",
+              "jsonPath": "$.list[*].weather[*].description"
+            },
+            {
+              "title": "visibility",
+              "jsonPath": "$.list[*].visibility"
+            },
+            {
+              "title": "temp",
+              "jsonPath": "$.list[*].main.temp"
+            },
+            {
+              "title": "tempMin",
+              "jsonPath": "$.list[*].main.temp_min"
+            },
+            {
+              "title": "tempMax",
+              "jsonPath": "$.list[*].main.temp_max"
+            },
+            {
+              "title": "place",
+              "jsonPath": "$.list[*].name"
+            }
+          ]
+        }
+      },
+      "servers": [
+        {
+          "url": "http://api.openweathermap.org"
+        }
+      ]
+    },
+    "/data/2.5/find": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "cd46382fd7d243f1add70fbef4bdee84"
+          },
+          {
+            "name": "cnt",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "5"
+          },
+          {
+            "name": "lon",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "121.25"
+          },
+          {
+            "name": "lat",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "24.8"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://api.openweathermap.org"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "getWeatherInCircle"
+          }
+        ],
+        "x-bot-utter": [
+          {
+            "parameterName": "appid",
+            "utter": "What is your API key?"
+          },
+          {
+            "parameterName": "cnt",
+            "utter": "How many result do you expect?"
+          },
+          {
+            "parameterName": "lon",
+            "utter": "What longitude do you want to query?"
+          },
+          {
+            "parameterName": "lat",
+            "utter": "What latitude do you want to query?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "appid",
+            "entityValue": [
+              "cd46382fd7d243f1add70fbef4bdee84"
+            ]
+          },
+          {
+            "parameterName": "cnt",
+            "entityValue": [
+              "5"
+            ]
+          },
+          {
+            "parameterName": "lat",
+            "entityValue": [
+              "25.128"
+            ]
+          },
+          {
+            "parameterName": "lon",
+            "entityValue": [
+              "121.742"
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "weather",
+              "jsonPath": "$.list[*].weather[*].main"
+            },
+            {
+              "title": "weatherDescribe",
+              "jsonPath": "$.list[*].weather[*].description"
+            },
+            {
+              "title": "temp",
+              "jsonPath": "$.list[*].main.temp"
+            },
+            {
+              "title": "tempMin",
+              "jsonPath": "$.list[*].main.temp_min"
+            },
+            {
+              "title": "tempMax",
+              "jsonPath": "$.list[*].main.temp_max"
+            },
+            {
+              "title": "place",
+              "jsonPath": "$.list[*].name"
+            }
+          ]
+        }
+      },
+      "servers": [
+        {
+          "url": "http://api.openweathermap.org"
+        }
+      ]
+    }
+  },
+  "components": {}
+}
