@@ -10,7 +10,7 @@
         "flow": [
           "/data/2.5/weather",
           "/data/2.5/box/city",
-          "/data/2.5/box/find"
+          "/data/2.5/find"
         ]
       }
     ],
