@@ -4,15 +4,6 @@
     "title": "defaultTitle",
     "description": "defaultDescription",
     "version": "0.1",
-    "x-chatbotFlow": [
-      {
-        "flowName": "find holiday",
-        "flow": [
-          "/api/v1/holidays",
-          "/api/v1/provinces"
-        ]
-      }
-    ],
     "x-input-template": {
       "useEndpoint": [
         "I want to get ${pathName}",
@@ -69,11 +60,6 @@
         "servers": [
           {
             "url": "https://canada-holidays.ca"
-          }
-        ],
-        "x-chatbotFlow": [
-          {
-            "flowName": "search holiday"
           }
         ],
         "x-bot-utter": [
@@ -168,11 +154,6 @@
         "servers": [
           {
             "url": "https://canada-holidays.ca"
-          }
-        ],
-        "x-chatbotFlow": [
-          {
-            "flowName": "search from provinces"
           }
         ],
         "x-bot-utter": [
