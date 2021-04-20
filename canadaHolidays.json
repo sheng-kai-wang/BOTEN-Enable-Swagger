@@ -113,7 +113,7 @@
           }
         ],
         "x-bot-jsonpPath-result": {
-          "items": 5,
+          "item": 5,
           "result": [
             {
               "title": "date",
@@ -198,7 +198,7 @@
           }
         ],
         "x-bot-jsonpPath-result": {
-          "items": 4,
+          "item": 4,
           "result": [
             {
               "title": "provincesName",
