@@ -1,0 +1,230 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "defaultTitle",
+    "description": "defaultDescription",
+    "version": "0.1",
+    "x-chatbotFlow": [
+      {
+        "flowName": "find holiday",
+        "flow": [
+          "/api/v1/holidays",
+          "/api/v1/provinces"
+        ]
+      }
+    ],
+    "x-input-template": {
+      "useEndpoint": [
+        "I want to get ${pathName}",
+        "I want to use ${pathName}"
+      ],
+      "parameterList": [
+        "I want to see the ${pathName} parameters list",
+        "${pathName} parameters list"
+      ],
+      "fillParameter": [
+        "Fill in the ${pathName}",
+        "Fill ${pathName}"
+      ]
+    }
+  },
+  "servers": [
+    {
+      "url": "https://canada-holidays.ca"
+    }
+  ],
+  "paths": {
+    "/api/v1/holidays": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "year",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2020"
+          },
+          {
+            "name": "federal",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "0"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://canada-holidays.ca"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "search holiday"
+          }
+        ],
+        "x-bot-utter": [
+          {
+            "parameterName": "year",
+            "utter": "What year do you want to query?"
+          },
+          {
+            "parameterName": "federal",
+            "utter": "Which federal do you want to query?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "year",
+            "regex": [
+              "^1[0-9]{3}$",
+              "^20[0-1][0-9]$",
+              "^202[0-1]$"
+            ],
+            "entityValue": [
+              1987,
+              1999,
+              2011,
+              2020
+            ]
+          },
+          {
+            "parameterName": "federal",
+            "regex": [
+              "^[0-1]$"
+            ],
+            "entityValue": [
+              0,
+              1
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "items": 5,
+          "result": [
+            {
+              "title": "date",
+              "jsonPath": "$.holidays[*].date"
+            },
+            {
+              "title": "nameEn",
+              "jsonPath": "$.holidays[*].nameEn"
+            },
+            {
+              "title": "nameFr",
+              "jsonPath": "$.holidays[*].nameFr"
+            },
+            {
+              "title": "federal",
+              "jsonPath": "$.holidays[*].federal"
+            },
+            {
+              "title": "observedDate",
+              "jsonPath": "$.holidays[*].observedDate"
+            }
+          ]
+        }
+      },
+      "servers": [
+        {
+          "url": "https://canada-holidays.ca"
+        }
+      ]
+    },
+    "/api/v1/provinces": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "year",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2020"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://canada-holidays.ca"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "search from provinces"
+          }
+        ],
+        "x-bot-utter": [
+          {
+            "parameterName": "year",
+            "utter": "What year do you want to query?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "year",
+            "regex": [
+              "^1[0-9]{3}$",
+              "^20[0-1][0-9]$",
+              "^202[0-1]$"
+            ],
+            "entityValue": [
+              1987,
+              1999,
+              2011,
+              2020
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "items": 4,
+          "result": [
+            {
+              "title": "provincesName",
+              "jsonPath": "$.provinces[*].nameEn"
+            },
+            {
+              "title": "holidayName",
+              "jsonPath": "$.provinces[*].holidays[*].nameEn"
+            },
+            {
+              "title": "date",
+              "jsonPath": "$.provinces[*].holidays[*].date"
+            },
+            {
+              "title": "federal",
+              "jsonPath": "$.provinces[*].holidays[*].federal"
+            }
+          ]
+        }
+      },
+      "servers": [
+        {
+          "url": "https://canada-holidays.ca"
+        }
+      ]
+    }
+  },
+  "components": {}
+}
