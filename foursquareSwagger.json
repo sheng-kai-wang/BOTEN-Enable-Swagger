@@ -132,7 +132,8 @@
 					},
 					{
 						"parameterName": "ll",
-						"utter": "What is the latitude and longitude ?"
+						"utter": "What is the latitude and longitude ?",
+						"auto":"latitude,longitude"
 					}
 				],
 				"x-user-entity": [
