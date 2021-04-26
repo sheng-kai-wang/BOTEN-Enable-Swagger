@@ -20,27 +20,41 @@
   </nav>
   <div class="container-fluid">
     <div class="card">
-      <div class="row">
-        <div class="col-12">
-          <div class="card-body" id="reponse">
-            <div class="row">
-              <H3 style="font-family: monospace;" class="col-3">Know your location</H3>
-              <button type="button" class="btn btn-outline-primary" id="allowLocation">Allow</button>
+      <div class="card-body" id="reponse">
+        <div class="row justify-content-between">
+          <div class="form-group col-3">
+            <label>Username</label>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Username" id="userName">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="userNameButton">Button</button>
+              </div>
             </div>
           </div>
+          <button type="button" class="btn btn-outline-secondary col-3" id="allowLocation">Allow to know the location</button>
         </div>
       </div>
     </div>
-
-    <form id="inputForm">
-      <div class="row">
-        <textarea class="col-9 form-control" name="userInput" id="userInput" rows="3"></textarea>
-        <button type="submit" class="col-3 btn btn-primary">Submit</button>
+    </br>
+    <form id="inputForm" class="row justify-content-around">
+      <div class="form-group col-9">
+        <input class="form-control" name="userInput" id="userInput"></input>
+      </div>
+      <div class="form-group col-3">
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
       </div>
     </form>
   </div>
   <script>
     $(document).ready(function() {
+      if (localStorage.getItem('userName') != null) {
+        $('#userName').attr("placeholder", localStorage.getItem('userName'));
+      }
+      $("#userNameButton").click(function() {
+        localStorage.setItem('userName', document.getElementById("userName").value);
+        console.log(localStorage.getItem('userName'));
+      });
+
       $("#inputForm").submit(function(e) {
         var userInput = document.getElementById("userInput").value;
         ajaxFunction(userInput);
@@ -75,59 +89,64 @@
       });
 
       function ajaxFunction(userInput) {
-        var reqData = {
-          "sender": "Rasa",
-          "message": userInput
-        }
-        $('#reponse').append(
-          '<div class="row"><p style = "font-family: monospace;">user: ' + userInput + '</p></div>'
-        );
-        console.log(reqData);
-        $.ajax({
-          type: "POST",
-          url: 'http://localhost:5005/webhooks/rest/webhook',
-          dataType: 'json',
-          data: JSON.stringify(reqData),
-          success: function(data) {
-            console.log(data);
-            data.forEach(function(value, index, array) {
-              let idList = Object.keys(data[index]);
-              idList.forEach(function(dataValue) {
-                if (dataValue == 'text') {
-                  var output = data[index]['text'];
-                  // json beautify
-                  if (isJsonString(output) == true) {
-                    var tmpData = JSON.parse(data[index]['text']);
-                    console.log(tmpData);
-                    if (tmpData['message'] == null) {
-                      var random = getRandomInt(10000);
-                      $('#reponse').append('<div id=' + random + '><table class="table"><thead></thead><tbody></tbody></table></div>');
-                      $(tmpData['thead']).each(function(k, v) {
-                        $('#' + random + ' table thead').append(
-                          '<th scope="col">' + v + '</th>'
-                        );
-                      });
-                      $(tmpData['tbody']).each(function() {
-                        $(this).each(function(k, v) {
-                          $('#' + random + ' table tbody').append('<tr></tr>');
-                          $('#' + random + ' table tbody tr:nth-child(' + (k + 1) + ')').append(
+        if (localStorage.getItem('userName') != null) {
+          var reqData = {
+            "sender": localStorage.getItem('userName'),
+            "message": userInput
+          }
+          $('#reponse').append(
+            '<div class="row"><p style = "font-family: monospace;">user: ' + userInput + '</p></div>'
+          );
+          console.log(reqData);
+          $.ajax({
+            type: "POST",
+            url: 'http://localhost:5005/webhooks/rest/webhook',
+            dataType: 'json',
+            data: JSON.stringify(reqData),
+            success: function(data) {
+              console.log(data);
+              data.forEach(function(value, index, array) {
+                let idList = Object.keys(data[index]);
+                idList.forEach(function(dataValue) {
+                  if (dataValue == 'text') {
+                    var output = data[index]['text'];
+                    // json beautify
+                    if (isJsonString(output) == true) {
+                      var tmpData = JSON.parse(data[index]['text']);
+                      console.log(tmpData);
+                      if (tmpData['message'] == null) {
+                        var random = getRandomInt(10000);
+                        $('#reponse').append('<div id=' + random + '><table class="table table-striped"><thead class="thead-dark"></thead><tbody></tbody></table></div>');
+                        $(tmpData['thead']).each(function(k, v) {
+                          $('#' + random + ' table thead').append(
                             '<th scope="col">' + v + '</th>'
                           );
                         });
-                      });
+                        $(tmpData['tbody']).each(function() {
+                          $(this).each(function(k, v) {
+                            $('#' + random + ' table tbody').append('<tr></tr>');
+                            $('#' + random + ' table tbody tr:nth-child(' + (k + 1) + ')').append(
+                              '<th scope="col">' + v + '</th>'
+                            );
+                          });
+                        });
+                      } else {
+                        $('#reponse').append('<div class="row"><p style = "font-family: monospace;">bot: ' + tmpData['message'] + '</p></div>');
+                      }
                     } else {
-                      $('#reponse').append('<div class="row"><p style = "font-family: monospace;">bot: ' + tmpData['message'] + '</p></div>');
+                      $('#reponse').append('<div class="row"><p style = "font-family: monospace;">bot: ' + output + '</p></div>');
                     }
-                  } else {
-                    $('#reponse').append('<div class="row"><p style = "font-family: monospace;">bot: ' + output + '</p></div>');
                   }
-                }
+                });
               });
-            });
-            document.getElementById("userInput").value = "";
-          }
-        });
+              document.getElementById("userInput").value = "";
+            }
+          });
+        } else {
+          alert("Please enter your username");
+        }
       }
+
       //is json?
       function isJsonString(str) {
         try {
