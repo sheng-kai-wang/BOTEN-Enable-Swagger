@@ -120,11 +120,11 @@
 					},
 					{
 						"parameterName": "client_id",
-						"utter": "What's your' client_id?"
+						"default": "RQQRFNZSMYRZDWCAQFC5RNAM0SWIAONSWWRYCR2PJXW5TQXR"
 					},
 					{
 						"parameterName": "client_secret",
-						"utter": "What's your' client_secret?"
+						"default": "UGUD420J2ASQC3NZXQIFSPHFFK24GQDOWBD0LNT3OVMV4VZ2"
 					},
 					{
 						"parameterName": "v",
@@ -255,11 +255,11 @@
 				"x-bot-utter": [
 					{
 						"parameterName": "client_id",
-						"utter": "What's your' client_id?"
+						"default": "RQQRFNZSMYRZDWCAQFC5RNAM0SWIAONSWWRYCR2PJXW5TQXR"
 					},
 					{
 						"parameterName": "client_secret",
-						"utter": "What's your' client_secret?"
+						"default": "UGUD420J2ASQC3NZXQIFSPHFFK24GQDOWBD0LNT3OVMV4VZ2"
 					},
 					{
 						"parameterName": "v",
