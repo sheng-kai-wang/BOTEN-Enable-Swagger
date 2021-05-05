@@ -3,7 +3,15 @@
     "info":{
         "title":"defaultTitle",
         "description":"defaultDescription",
-        "version":"0.1"
+        "version":"0.1",
+        "x-chatbotFlow":[
+            {
+                "flowName":"MyIP",
+                "flow":[
+                    "/ip"
+                ]
+            }
+        ]
     },
     "servers":[
         {
@@ -36,8 +44,17 @@
                         "url":"https://httpbin.org"
                     }
                 ],
-                "x-bot-utter":[],
-                "x-user-entity":[],
+                "x-chatbotFlow":[
+                    {
+                        "flowName":"MyIP"
+                    }
+                ],
+                "x-bot-utter":[
+                    
+                ],
+                "x-user-entity":[
+                    
+                ],
                 "x-bot-jsonpPath-result":{
                     "item":1,
                     "result":[
@@ -79,8 +96,12 @@
                         "url":"https://httpbin.org"
                     }
                 ],
-                "x-bot-utter":[],
-                "x-user-entity":[],
+                "x-bot-utter":[
+                    
+                ],
+                "x-user-entity":[
+                    
+                ],
                 "x-bot-jsonpPath-result":{
                     "item":1,
                     "result":[
@@ -117,8 +138,12 @@
                         "url":"https://httpbin.org"
                     }
                 ],
-                "x-bot-utter":[],
-                "x-user-entity":[],
+                "x-bot-utter":[
+                    
+                ],
+                "x-user-entity":[
+                    
+                ],
                 "x-bot-jsonpPath-result":{
                     "item":1,
                     "result":[
