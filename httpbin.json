@@ -1,0 +1,206 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "defaultTitle",
+    "description": "defaultDescription",
+    "version": "0.1",
+    "x-chatbotFlow": [
+      {
+        "flowName": "MyIP",
+        "flow": [
+          "/ip"
+        ]
+      },
+      {
+        "flowName": "getRandomUUID",
+        "flow": [
+          "/uuid"
+        ]
+      },
+      {
+        "flowName": "getCookies",
+        "flow": [
+          "/cookies"
+        ]
+      },
+      {
+        "flowName": "getJPEGimg",
+        "flow": [
+          "/image/jpeg"
+        ]
+      }
+    ]
+  },
+  "servers": [
+    {
+      "url": "https://httpbin.org"
+    }
+  ],
+  "paths": {
+    "/ip": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\n  \"origin\": \"220.133.19.163\"\n}\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://httpbin.org"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "MyIP"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://httpbin.org"
+        }
+      ]
+    },
+    "/uuid": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_1"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\n  \"uuid\": \"a83bd50c-fe9d-4d63-b74c-093620736352\"\n}\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://httpbin.org"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "getRandomUUID"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://httpbin.org"
+        }
+      ]
+    },
+    "/cookies": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_2"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\n  \"cookies\": {}\n}\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://httpbin.org"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "getCookies"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://httpbin.org"
+        }
+      ]
+    },
+    "/image/jpeg": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://httpbin.org"
+          }
+        ],
+        "x-chatbotFlow": [
+          {
+            "flowName": "getJPEGimg"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://httpbin.org"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200_1": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200_2": {
+        "type": "object",
+        "properties": {
+          "cookies": {
+            "type": "object",
+            "properties": {}
+          }
+        }
+      }
+    }
+  }
+}
