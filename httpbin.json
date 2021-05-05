@@ -141,33 +141,33 @@
                     ]
                 }
             }
-        },
-        "components":{
-            "schemas":{
-                "inline_response_200":{
-                    "type":"object",
-                    "properties":{
-                        "origin":{
-                            "type":"string"
-                        }
+        }
+    },
+    "components":{
+        "schemas":{
+            "inline_response_200":{
+                "type":"object",
+                "properties":{
+                    "origin":{
+                        "type":"string"
                     }
-                },
-                "inline_response_200_1":{
-                    "type":"object",
-                    "properties":{
-                        "uuid":{
-                            "type":"string"
-                        }
+                }
+            },
+            "inline_response_200_1":{
+                "type":"object",
+                "properties":{
+                    "uuid":{
+                        "type":"string"
                     }
-                },
-                "inline_response_200_2":{
-                    "type":"object",
-                    "properties":{
-                        "cookies":{
-                            "type":"object",
-                            "properties":{
-                                
-                            }
+                }
+            },
+            "inline_response_200_2":{
+                "type":"object",
+                "properties":{
+                    "cookies":{
+                        "type":"object",
+                        "properties":{
+                            
                         }
                     }
                 }
