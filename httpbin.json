@@ -36,12 +36,8 @@
                         "url":"https://httpbin.org"
                     }
                 ],
-                "x-bot-utter":{
-                    
-                },
-                "x-user-entity":{
-                    
-                },
+                "x-bot-utter":[],
+                "x-user-entity":[],
                 "x-bot-jsonpPath-result":{
                     "item":1,
                     "result":[
@@ -83,12 +79,8 @@
                         "url":"https://httpbin.org"
                     }
                 ],
-                "x-bot-utter":{
-                    
-                },
-                "x-user-entity":{
-                    
-                },
+                "x-bot-utter":[],
+                "x-user-entity":[],
                 "x-bot-jsonpPath-result":{
                     "item":1,
                     "result":[
@@ -125,12 +117,8 @@
                         "url":"https://httpbin.org"
                     }
                 ],
-                "x-bot-utter":{
-                    
-                },
-                "x-user-entity":{
-                    
-                },
+                "x-bot-utter":[],
+                "x-user-entity":[],
                 "x-bot-jsonpPath-result":{
                     "item":1,
                     "result":[
