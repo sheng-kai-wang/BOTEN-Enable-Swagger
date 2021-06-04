@@ -92,7 +92,7 @@
           },
           {
             "parameterName": "client_secret",
-            "default": null
+            "default": "hUW3JsPbDRqdb13O%2FrGBH44dbuNmDwaUNAevME7CKXI%3D"
           },
           {
             "parameterName": "lng",
