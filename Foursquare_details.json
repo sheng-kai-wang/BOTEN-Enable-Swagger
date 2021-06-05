@@ -9,8 +9,9 @@
         "flowName": "detailsVenue",
         "flow": [
           "/v2/venues/explore",
-          "/v2/venues/{VENUE_ID}",
-          "/v2/venues/{VENUE_ID}/hours"
+          "/v2/venues/{VENUE_ID}/tips",
+          "/v2/venues/{VENUE_ID}/hours",
+          "/v2/venues/{VENUE_ID}/nextvenues"
         ]
       }
     ],
