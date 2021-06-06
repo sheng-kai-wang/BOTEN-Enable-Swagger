@@ -327,7 +327,7 @@
           "result": [
             {
               "title": "name",
-              "jsonPath": "$.keywords.name"
+              "jsonPath": "$.keywords[*].name"
             }
           ]
         }
