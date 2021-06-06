@@ -252,15 +252,15 @@
           "result": [
             {
               "title": "name",
-              "jsonPath": "$.cast.name"
+              "jsonPath": "$.cast[*].name"
             },
             {
               "title": "character",
-              "jsonPath": "$.cast.character"
+              "jsonPath": "$.cast[*].character"
             },
             {
               "title": "popularity",
-              "jsonPath": "$.cast.popularity"
+              "jsonPath": "$.cast[*].popularity"
             }
           ]
         }
