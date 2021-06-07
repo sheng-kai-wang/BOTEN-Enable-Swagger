@@ -1,0 +1,99 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "IP geolocation API",
+    "description": "Abstract IP geolocation API allows developers to retrieve the region, country and city behind any IP",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://ipgeolocation.abstractapi.com"
+    }
+  ],
+  "paths": {
+    "/v1": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "explode": true,
+            "in": "query",
+            "name": "api_key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form"
+          },
+          {
+            "explode": true,
+            "in": "query",
+            "name": "ip_address",
+            "required": false,
+            "schema": {
+              "example": "195.154.25.40",
+              "type": "string"
+            },
+            "style": "form"
+          },
+          {
+            "explode": true,
+            "in": "query",
+            "name": "fields",
+            "required": false,
+            "schema": {
+              "example": "country,city,timezone",
+              "type": "string"
+            },
+            "style": "form"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "0": {
+                    "value": "{\"ip_address\":\"195.154.25.40\",\"city\":\"Paris\",\"city_geoname_id\":2988507,\"region\":\"�𥱥e-de-France\",\"region_iso_code\":\"IDF\",\"region_geoname_id\":3012874,\"postal_code\":\"75008\",\"country\":\"France\",\"country_code\":\"FR\",\"country_geoname_id\":3017382,\"country_is_eu\":true,\"continent\":\"Europe\",\"continent_code\":\"EU\",\"continent_geoname_id\":6255148,\"longitude\":2.4075,\"latitude\":48.8323,\"security\":{\"is_vpn\":false},\"timezone\":{\"name\":\"Europe/Paris\",\"abbreviation\":\"CEST\",\"gmt_offset\":2,\"current_time\":\"15:42:18\",\"is_dst\":true},\"flag\":{\"emoji\":\"<禱<繩\",\"unicode\":\"U+1F1EB U+1F1F7\",\"png\":\"https://static.abstractapi.com/country-flags/FR_flag.png\",\"svg\":\"https://static.abstractapi.com/country-flags/FR_flag.svg\"},\"currency\":{\"currency_name\":\"Euros\",\"currency_code\":\"EUR\"},\"connection\":{\"autonomous_system_number\":12876,\"autonomous_system_organization\":\"Online S.a.s.\",\"connection_type\":\"Corporate\",\"isp_name\":\"Online S.A.S.\",\"organization_name\":\"ONLINE\"}}"
+                  }
+                }
+              }
+            },
+            "description": "Location of geolocated IP"
+          }
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "6df68263f3f94212815fdc60e51723a5"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "6df68263f3f94212815fdc60e51723a5"
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "ip_address",
+              "jsonPath": "$.ip_address"
+            },
+            {
+              "title": "city",
+              "jsonPath": "$.city"
+            },
+            {
+              "title": "country",
+              "jsonPath": "$country"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
