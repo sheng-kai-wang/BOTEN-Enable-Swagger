@@ -3,21 +3,7 @@
   "info": {
     "title": "The Movie DB",
     "description": "Multiple endpoints",
-    "version": "0.1",
-    "x-input-template": {
-      "useEndpoint": [
-        "I want to get ${pathName}",
-        "I want to use ${pathName}"
-      ],
-      "parameterList": [
-        "I want to see the ${pathName} parameters list",
-        "${pathName} parameters list"
-      ],
-      "fillParameter": [
-        "Fill in the ${pathName}",
-        "Fill ${pathName}"
-      ]
-    }
+    "version": "0.1"
   },
   "servers": [
     {
@@ -70,6 +56,20 @@
           "200": {
             "description": "Auto generated using Swagger Inspector"
           }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to get popular movie",
+            "I want to use popular movie"
+          ],
+          "parameterList": [
+            "I want to see the popular movie parameters list",
+            "${pathName} parameters list"
+          ],
+          "fillParameter": [
+            "Fill in the popular movie",
+            "Fill popular movie"
+          ]
         },
         "x-bot-utter": [
           {
