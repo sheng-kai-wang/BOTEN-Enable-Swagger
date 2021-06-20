@@ -59,16 +59,16 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "I want to get popular movie",
-            "I want to use popular movie"
+            "I want to check the list of popular movies",
+            "I want to use query popular movies API"
           ],
           "parameterList": [
-            "I want to see the popular movie parameters list",
-            "${pathName} parameters list"
+            "I want to view the parameters of the popular movie API",
+            "View the parameters of the popular movie API"
           ],
           "fillParameter": [
-            "Fill in the popular movie",
-            "Fill popular movie"
+            "I want to fill in the parameters of the popular movie API",
+            "fill in the parameters of the popular movie API"
           ]
         },
         "x-bot-utter": [
@@ -135,6 +135,20 @@
           "200": {
             "description": "Auto generated using Swagger Inspector"
           }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to check the list of movies information",
+            "I want to use query movies information API"
+          ],
+          "parameterList": [
+            "I want to view the parameters of the movie information API",
+            "View the parameters of the movie information API"
+          ],
+          "fillParameter": [
+            "I want to fill in the parameters of the movie information API",
+            "fill in the parameters of the movie information API"
+          ]
         },
         "x-bot-utter": [
           {
@@ -219,6 +233,23 @@
             "description": "Auto generated using Swagger Inspector"
           }
         },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to check the list of movies credits",
+            "I want to use query movies credits API",
+            "I want to use query movies character API"
+          ],
+          "parameterList": [
+            "I want to view the parameters of the movie credits API",
+            "View the parameters of the movie credits API",
+            "View the parameters of the movie character API"
+          ],
+          "fillParameter": [
+            "I want to fill in the parameters of the movie credits API",
+            "fill in the parameters of the movie credits API",
+            "fill in the parameters of the movie character API"
+          ]
+        },
         "x-bot-utter": [
           {
             "parameterName": "api_key",
@@ -294,6 +325,20 @@
             "description": "Auto generated using Swagger Inspector"
           }
         },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to check the list of movies using keywords",
+            "I want to use query movies API using keywords"
+          ],
+          "parameterList": [
+            "I want to view the parameters of the movie API using keywords",
+            "View the parameters of the movie API using keywords"
+          ],
+          "fillParameter": [
+            "I want to fill in the parameters of the movie API using keywords",
+            "fill in the parameters of the movie API using keywords"
+          ]
+        },
         "x-bot-utter": [
           {
             "parameterName": "api_key",
@@ -360,6 +405,20 @@
           "200": {
             "description": "Auto generated using Swagger Inspector"
           }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to check the list of similar movies",
+            "I want to use query similar movies API"
+          ],
+          "parameterList": [
+            "I want to view the parameters of the similar movie keywords",
+            "View the parameters of the similar movie API"
+          ],
+          "fillParameter": [
+            "I want to fill in the parameters of the similar movie API.",
+            "fill in the parameters of the similar movie API."
+          ]
         },
         "x-bot-utter": [
           {
