@@ -1,0 +1,155 @@
+{
+  "openapi": "3.0.2",
+  "servers": [
+    {
+      "url": "https://newsapi.org/v2"
+    }
+  ],
+  "info": {
+    "description": "News API is a simple HTTP REST API for searching and retrieving live articles from all over the web.",
+    "title": "News-API",
+    "version": "1"
+  },
+  "paths": {
+    "/top-headlines": {
+      "get": {
+        "parameters": [
+          {
+            "description": "Your API key",
+            "in": "query",
+            "name": "apiKey",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "The 2-letter ISO 3166-1 code of the country you want to get headlines for.",
+            "in": "query",
+            "name": "country",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to check the news",
+            "I want to use query news API"
+          ],
+          "parameterList": [
+            "I want to view the parameters of the news API",
+            "View the parameters of the news API"
+          ],
+          "fillParameter": [
+            "I want to fill in the parameters of the news API",
+            "fill in the parameters of the news API"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "apiKey",
+            "default": "007bcbcbc9704a8e9d674f9d47202461"
+          },
+          {
+            "parameterName": "country",
+            "utter": "The 2-letter ISO 3166-1 code of the country you want to get headlines for."
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "apiKey",
+            "entityValue": [
+              "007bcbcbc9704a8e9d674f9d47202461"
+            ]
+          },
+          {
+            "parameterName": "country",
+            "entityValue": [
+              "tw",
+              "us",
+              "jp"
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "title",
+              "jsonPath": "$.articles[*].title"
+            },
+            {
+              "title": "description",
+              "jsonPath": "$.articles[*].description"
+            },
+            {
+              "title": "url",
+              "jsonPath": "$.articles[*].url"
+            },
+            {
+              "title": "publishedAt",
+              "jsonPath": "$.articles[*].publishedAt"
+            }
+          ]
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "base": {
+                      "description": "The currency code you supplied as base in your request",
+                      "example": "USD",
+                      "type": "string"
+                    },
+                    "date": {
+                      "description": "The date these exchange rates are for",
+                      "type": "string"
+                    },
+                    "rates": {
+                      "additionalProperties": {
+                        "format": "double",
+                        "type": "number"
+                      },
+                      "description": "Each supported currency code in terms of the base currency",
+                      "type": "object"
+                    },
+                    "time_last_updated": {
+                      "description": "The epoch time this set of exchange rates was generated",
+                      "example": 1556293443,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error_type": {
+                      "type": "string"
+                    },
+                    "result": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Currency code not supported"
+          }
+        },
+        "summary": "Returns latest exchange rates in parameter-supplied base currency."
+      }
+    }
+  }
+}
