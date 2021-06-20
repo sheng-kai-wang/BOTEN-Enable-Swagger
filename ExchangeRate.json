@@ -72,7 +72,7 @@
         ],
         "x-user-entity": [
           {
-            "parameterName": "api_key",
+            "parameterName": "base_currency",
             "entityValue": [
               "USD",
               "TWD",
