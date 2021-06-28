@@ -7,7 +7,22 @@
     "x-chatbotFlow" : [ {
       "flowName" : "detailedPopularMovie",
       "flow" : [ "/movie/popular", "/movie/{movie_id}" ]
-    } ]
+    } ],
+				"x-input-template": {
+					"useEndpoint": [
+						"Get detailed information on popular movies",
+						"I want to get detailed information on popular movies"
+					],
+					"parameterList": [
+						"I want to see the detailed information on popular movies parameters list",
+						"detailed information on popular movies parameters list"
+					],
+					"fillParameter": [
+						"Fill in the detailed information on popular movies",
+						"Fill detailed information on popular movies"
+					]
+				}
+			}
   },
   "servers" : [ {
     "url" : "https://api.themoviedb.org/3"
