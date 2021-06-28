@@ -4,10 +4,14 @@
     "title" : "case2_themoviedb",
     "description" : "defaultDescription",
     "version" : "0.1",
-    "x-chatbotFlow" : [{
-      "flowName" : "detailedPopularMovie",
-      "flow" : [ "/movie/popular", "/movie/{movie_id}" ],
-			"x-input-template": {
+		"x-chatbotFlow": [
+			{
+				"flowName": "detailedPopularMovie",
+				"flow": [
+					"/movie/popular",
+					"/movie/{movie_id}"
+				],
+				"x-input-template": {
 				"useEndpoint": [
 					"Get detailed information on popular movies",
 					"I want to get detailed information on popular movies"
@@ -20,8 +24,9 @@
 					"Fill in the detailed information on popular movies",
 					"Fill detailed information on popular movies"
 				]
+				}
 			}
-    }]
+		]
   },
   "servers" : [ {
     "url" : "https://api.themoviedb.org/3"
