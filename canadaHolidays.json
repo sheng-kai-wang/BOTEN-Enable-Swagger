@@ -1,23 +1,9 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "defaultTitle",
+    "title": "case4_canadaHolidays",
     "description": "defaultDescription",
-    "version": "0.1",
-    "x-input-template": {
-      "useEndpoint": [
-        "I want to get ${pathName}",
-        "I want to use ${pathName}"
-      ],
-      "parameterList": [
-        "I want to see the ${pathName} parameters list",
-        "${pathName} parameters list"
-      ],
-      "fillParameter": [
-        "Fill in the ${pathName}",
-        "Fill ${pathName}"
-      ]
-    }
+    "version": "0.1"
   },
   "servers": [
     {
