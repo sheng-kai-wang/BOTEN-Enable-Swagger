@@ -1,17 +1,9 @@
 {
     "openapi":"3.0.1",
     "info":{
-        "title":"defaultTitle",
+        "title":"case5_httpbin",
         "description":"defaultDescription",
         "version":"0.1",
-        "x-chatbotFlow":[
-            {
-                "flowName":"MyIP",
-                "flow":[
-                    "/ip"
-                ]
-            }
-        ]
     },
     "servers":[
         {
@@ -42,11 +34,6 @@
                 "servers":[
                     {
                         "url":"https://httpbin.org"
-                    }
-                ],
-                "x-chatbotFlow":[
-                    {
-                        "flowName":"MyIP"
                     }
                 ],
                 "x-bot-utter":[
