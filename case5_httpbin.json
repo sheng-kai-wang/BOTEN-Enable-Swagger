@@ -3,7 +3,7 @@
     "info":{
         "title":"case5_httpbin",
         "description":"defaultDescription",
-        "version":"0.1",
+        "version":"0.1"
     },
     "servers":[
         {
