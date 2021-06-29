@@ -1,2 +1,2 @@
 # BOTEN Enable Swagger
-所有Swagger的範例，包含了擴充
+所有BOTEN Enable Swagger的範例
