@@ -3,17 +3,7 @@
   "info": {
     "title": "case3_openweather",
     "description": "defaultDescription",
-    "version": "0.1",
-    "x-chatbotFlow": [
-      {
-        "flowName": "openweather",
-        "flow": [
-          "/data/2.5/weather",
-          "/data/2.5/box/city",
-          "/data/2.5/find"
-        ]
-      }
-    ]
+    "version": "0.1"
   },
   "servers": [
     {
@@ -97,11 +87,6 @@
         "servers": [
           {
             "url": "http://api.openweathermap.org"
-          }
-        ],
-        "x-chatbotFlow": [
-          {
-            "flowName": "openweather"
           }
         ],
         "x-bot-utter": [
@@ -252,11 +237,6 @@
             "url": "http://api.openweathermap.org"
           }
         ],
-        "x-chatbotFlow": [
-          {
-            "flowName": "openweather"
-          }
-        ],
         "x-bot-utter": [
           {
             "parameterName": "bbox",
@@ -386,11 +366,6 @@
         "servers": [
           {
             "url": "http://api.openweathermap.org"
-          }
-        ],
-        "x-chatbotFlow": [
-          {
-            "flowName": "openweather"
           }
         ],
         "x-bot-utter": [
