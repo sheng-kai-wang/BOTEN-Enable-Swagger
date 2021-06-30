@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "IP geolocation API",
+    "title": "case8_IP geolocation API",
     "description": "Abstract IP geolocation API allows developers to retrieve the region, country and city behind any IP",
     "version": "v1"
   },
@@ -61,6 +61,20 @@
             },
             "description": "Location of geolocated IP"
           }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to get IP",
+            "I want to use query IP API"
+          ],
+          "parameterList": [
+            "I want to view the parameters of the IP",
+            "View the parameters of the IP API"
+          ],
+          "fillParameter": [
+            "I want to fill in the parameters of IP",
+            "fill in the parameters of the IP API"
+          ]
         },
         "x-bot-utter": [
           {
