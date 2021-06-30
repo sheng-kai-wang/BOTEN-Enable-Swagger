@@ -7,7 +7,7 @@
   ],
   "info": {
     "description": "News API is a simple HTTP REST API for searching and retrieving live articles from all over the web.",
-    "title": "News-API",
+    "title": "case9_News-API",
     "version": "1"
   },
   "paths": {
