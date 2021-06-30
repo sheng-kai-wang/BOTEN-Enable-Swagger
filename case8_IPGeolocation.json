@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "case8_IP geolocation API",
+    "title": "case8_IPGeolocation API",
     "description": "Abstract IP geolocation API allows developers to retrieve the region, country and city behind any IP",
     "version": "v1"
   },
