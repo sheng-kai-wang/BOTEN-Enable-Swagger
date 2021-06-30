@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Foursquare_details",
+    "title": "case6_Foursquare_details",
     "description": "Details of a Venue",
     "version": "0.1",
     "x-chatbotFlow": [
@@ -12,23 +12,23 @@
           "/v2/venues/{VENUE_ID}/tips",
           "/v2/venues/{VENUE_ID}/hours",
           "/v2/venues/{VENUE_ID}/nextvenues"
-        ]
+        ],
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to get detailed information about venues",
+            "Get details of attractions"
+          ],
+          "parameterList": [
+            "I want to see the details of venues parameters list",
+            "details parameters list"
+          ],
+          "fillParameter": [
+            "Fill in the details",
+            "Fill details of venues parameters"
+          ]
+        }
       }
-    ],
-    "x-input-template": {
-      "useEndpoint": [
-        "I want to get ${pathName}",
-        "I want to use ${pathName}"
-      ],
-      "parameterList": [
-        "I want to see the ${pathName} parameters list",
-        "${pathName} parameters list"
-      ],
-      "fillParameter": [
-        "Fill in the ${pathName}",
-        "Fill ${pathName}"
-      ]
-    }
+    ]
   },
   "servers": [
     {
@@ -93,6 +93,20 @@
             ]
           }
         ],
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to get explore about venues",
+            "Get explore of attractions"
+          ],
+          "parameterList": [
+            "I want to see the explore of venues parameters list",
+            "explore parameters list"
+          ],
+          "fillParameter": [
+            "Fill in the explore",
+            "Fill explore of venues parameters"
+          ]
+        },
         "x-bot-utter": [
           {
             "parameterName": "client_id",
@@ -214,6 +228,20 @@
             ]
           }
         ],
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to get tips about venues",
+            "Get tips of attractions"
+          ],
+          "parameterList": [
+            "I want to see the tips of venues parameters list",
+            "tips parameters list"
+          ],
+          "fillParameter": [
+            "Fill in the tips",
+            "Fill tips of venues parameters"
+          ]
+        },
         "x-bot-utter": [
           {
             "parameterName": "client_id",
@@ -328,6 +356,20 @@
             ]
           }
         ],
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to get hours about venues",
+            "Get hours of attractions"
+          ],
+          "parameterList": [
+            "I want to see the hours of venues parameters list",
+            "hours parameters list"
+          ],
+          "fillParameter": [
+            "Fill in the hours",
+            "Fill hours of venues parameters"
+          ]
+        },
         "x-bot-utter": [
           {
             "parameterName": "client_id",
@@ -446,6 +488,20 @@
             ]
           }
         ],
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to get next venues",
+            "Get next attractions"
+          ],
+          "parameterList": [
+            "I want to see the next venues parameters list",
+            "next venues parameters list"
+          ],
+          "fillParameter": [
+            "Fill in the next venues",
+            "Fill next venues parameters"
+          ]
+        },
         "x-bot-utter": [
           {
             "parameterName": "client_id",
