@@ -15,14 +15,6 @@
 					"useEndpoint": [
 						"I want to get suggeastVenues endpoint",
 						"I want to use suggeastVenues"
-					],
-					"parameterList": [
-						"I want to see the suggeastVenues parameters list",
-						"suggeastVenues parameters list"
-					],
-					"fillParameter": [
-						"Fill in the suggeastVenues",
-						"Fill suggeastVenues"
 					]
 				}
 			}
