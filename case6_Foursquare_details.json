@@ -20,13 +20,9 @@
             "I want to get all the information about the attraction"
           ],
           "parameterList": [
-            "I want to see the details of venues parameters list",
-            "details parameters list",
-            "Parameters required to obtain all the information of the scenic spot"
-          ],
-          "fillParameter": [
-            "Fill in the details",
-            "Fill details of venues parameters"
+            "I want to see the filled in parameters for the venue service",
+            "filled in parameters for detailed information about venues",
+            "Get the filled in Parameters to obtain all the detailed of the scenic spot"
           ]
         }
       }
@@ -102,13 +98,9 @@
             "Search for attractions"
           ],
           "parameterList": [
-            "I want to see the explore of venues parameters list",
-            "explore parameters list",
-            "What parameters do I need to fill in to explore attractions"
-          ],
-          "fillParameter": [
-            "Fill in the explore",
-            "Fill explore of venues parameters"
+            "I want to see the parameters that are populated in order to get the sights",
+            "the parameters filled in to get venues",
+            "What parameters did I fill in for explore attractions"
           ]
         },
         "x-bot-utter": [
@@ -239,13 +231,9 @@
             "Get introduction about attractions"
           ],
           "parameterList": [
-            "I want to see the tips of venues parameters list",
-            "tips parameters list",
-            "What parameters do I need to get the tips of the attractions?"
-          ],
-          "fillParameter": [
-            "Fill in the tips",
-            "Fill tips of venues parameters"
+            "I want to see the parameters that are populated in order to get the tips of venues",
+            "the parameters filled in to get the introduction of venues",
+            "What parameters did I fill in for explore tips of attractions?"
           ]
         },
         "x-bot-utter": [
@@ -365,17 +353,13 @@
         "x-input-template": {
           "useEndpoint": [
             "I want to get hours about venues",
-            "Get hours of attractions",
+            "Get opening time of attractions",
             "Attraction opening hours"
           ],
           "parameterList": [
-            "I want to see the hours of venues parameters list",
-            "hours parameters list",
-            "What parameters do I need to get the opening hours of the attractions?"
-          ],
-          "fillParameter": [
-            "Fill in the hours",
-            "Fill hours of venues parameters"
+            "I want to see the parameters that are populated in order to get the opening time of venues",
+            "the parameters filled in to get the hours of venues",
+            "What parameters did I fill in for explore opening time of attractions?"
           ]
         },
         "x-bot-utter": [
@@ -503,13 +487,9 @@
             "see next venues"
           ],
           "parameterList": [
-            "I want to see the next venues parameters list",
-            "next venues parameters list",
-            "get next venues parameters list"
-          ],
-          "fillParameter": [
-            "Fill in the next venues",
-            "Fill next venues parameters"
+            "I want to see the parameters that are populated in order to get the next venues",
+            "the parameters filled in to get the next venues",
+            "What parameters did I fill in for explore the next attraction?"
           ]
         },
         "x-bot-utter": [
