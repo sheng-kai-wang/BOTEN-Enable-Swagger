@@ -59,14 +59,12 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "I want to see the list of popular film",
-            "show me the popular picture list",
+            "show me the popular film",
             "Recommend popular film"
           ],
           "parameterList": [
             "see the satiate in argument for the popular movies",
             "the make full in argument for the popular picture",
-            "Get the parameter I make fill in for inquiry the list of popular pic"
           ]
         },
         "x-bot-utter": [
@@ -136,12 +134,10 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "I deficiency to see the listing of film detail",
             "show me the film detail",
             "the film detail"
           ],
           "parameterList": [
-            "I want to see the make full in parameters for the film detail",
             "Get the parameter I make fill in for inquiry the film detail",
             "replete in parameter for the pic detail"
           ]
@@ -232,11 +228,9 @@
         "x-input-template": {
           "useEndpoint": [
             "the crew of this movie",
-            "I would like to know who is involved in this movie",
             "the work party of this cinema"
           ],
           "parameterList": [
-            "I want to see the make full in parameters for the film course credit",
             "the full in parameters for beget the crowd of this cinema",
             "the satiate in argument for getting the crowd of this film"
           ]
@@ -319,11 +313,9 @@
         "x-input-template": {
           "useEndpoint": [
             "film keywords",
-            "query keywords collegiate to this motion picture",
             "keywords link up to this picture show"
           ],
           "parameterList": [
-            "see the replete in argument for the motion picture keywords",
             "Get the parameter I make fill in for inquiry the film 's keywords",
             "parameter I satiate in for interrogation the moving pictures keywords"
           ]
@@ -399,11 +391,9 @@
           "useEndpoint": [
             "the similar film",
             "I want to see the list of similar film",
-            "recommend similar film"
           ],
           "parameterList": [
-            "I want to see the satiate in parameters for the similar pic",
-            "the replete in argument for the listing of similar movies",
+            "the replete in argument for the listing of similar film",
             "Get the parameter I fill up in for inquiry the similar motion picture"
           ]
         },
