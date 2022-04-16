@@ -1,0 +1,458 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "case7_The Movie DB",
+    "description": "Multiple endpoints",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://api.themoviedb.org/3"
+    }
+  ],
+  "paths": {
+    "/movie/popular": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "en-US"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          },
+          {
+            "name": "region",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": null
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to see the list of popular film",
+            "show me the popular picture list",
+            "Recommend popular film"
+          ],
+          "parameterList": [
+            "see the satiate in argument for the popular movies",
+            "the make full in argument for the popular picture",
+            "Get the parameter I make fill in for inquiry the list of popular pic"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "ID",
+              "jsonPath": "$.results[*].id"
+            },
+            {
+              "title": "title",
+              "jsonPath": "$.results[*].title"
+            },
+            {
+              "title": "adult",
+              "jsonPath": "$.results[*].adult"
+            },
+            {
+              "title": "overview",
+              "jsonPath": "$.results[*].overview"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I deficiency to see the listing of film detail",
+            "show me the film detail",
+            "the film detail"
+          ],
+          "parameterList": [
+            "I want to see the make full in parameters for the film detail",
+            "Get the parameter I make fill in for inquiry the film detail",
+            "replete in parameter for the pic detail"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "title",
+              "jsonPath": "$.title"
+            },
+            {
+              "title": "adult",
+              "jsonPath": "$.adult"
+            },
+            {
+              "title": "overview",
+              "jsonPath": "$.overview"
+            },
+            {
+              "title": "popularity",
+              "jsonPath": "$.popularity"
+            },
+            {
+              "title": "status",
+              "jsonPath": "$.status"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}/credits": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "the crew of this movie",
+            "I would like to know who is involved in this movie",
+            "the work party of this cinema"
+          ],
+          "parameterList": [
+            "I want to see the make full in parameters for the film course credit",
+            "the full in parameters for beget the crowd of this cinema",
+            "the satiate in argument for getting the crowd of this film"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "name",
+              "jsonPath": "$.cast[*].name"
+            },
+            {
+              "title": "character",
+              "jsonPath": "$.cast[*].character"
+            },
+            {
+              "title": "popularity",
+              "jsonPath": "$.cast[*].popularity"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}/keywords": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "film keywords",
+            "query keywords collegiate to this motion picture",
+            "keywords link up to this picture show"
+          ],
+          "parameterList": [
+            "see the replete in argument for the motion picture keywords",
+            "Get the parameter I make fill in for inquiry the film 's keywords",
+            "parameter I satiate in for interrogation the moving pictures keywords"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "name",
+              "jsonPath": "$.keywords[*].name"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}/similar": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "the similar film",
+            "I want to see the list of similar film",
+            "recommend similar film"
+          ],
+          "parameterList": [
+            "I want to see the satiate in parameters for the similar pic",
+            "the replete in argument for the listing of similar movies",
+            "Get the parameter I fill up in for inquiry the similar motion picture"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "original_title",
+              "jsonPath": "$.results[*].original_title"
+            },
+            {
+              "title": "overview",
+              "jsonPath": "$.results[*].overview"
+            },
+            {
+              "title": "release_date",
+              "jsonPath": "$.results[*].release_date"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
