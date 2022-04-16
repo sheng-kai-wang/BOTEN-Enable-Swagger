@@ -59,14 +59,12 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "I want to see the list of popular movies",
-            "show me the popular movies list",
-            "Recommend popular movies"
+            "show me the popular film",
+            "Recommend popular film"
           ],
           "parameterList": [
-            "I want to see the filled in parameters for the popular movies",
-            "filled in parameters for the popular movies",
-            "Get the parameters I filled in for query the list of popular movies"
+            "see the satiate in argument for the popular movies",
+            "the make full in argument for the popular picture"
           ]
         },
         "x-bot-utter": [
@@ -136,14 +134,12 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "I want to see the list of movies details",
-            "the movies details",
-            "show me the movie details"
+            "show me the film detail",
+            "the film detail"
           ],
           "parameterList": [
-            "I want to see the filled in parameters for the movies details",
-            "filled in parameters for the movies details",
-            "Get the parameters I filled in for query the movie details"
+            "Get the parameter I make fill in for inquiry the film detail",
+            "replete in parameter for the pic detail"
           ]
         },
         "x-bot-utter": [
@@ -231,14 +227,12 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "the film credits",
-            "the crew of this film",
-            "I would like to know who is involved in this movie"
+            "the crew of this movie",
+            "the work party of this cinema"
           ],
           "parameterList": [
-            "I want to see the filled in parameters for the film credits",
-            "filled in parameters for the movie credits",
-            "the filled in parameters for getting the crew of this film"
+            "the full in parameters for beget the crowd of this cinema",
+            "the satiate in argument for getting the crowd of this film"
           ]
         },
         "x-bot-utter": [
@@ -318,14 +312,12 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "movie keywords",
-            "keywords for this movie",
-            "I want to query keywords related to this movie"
+            "film keywords",
+            "keywords link up to this picture show"
           ],
           "parameterList": [
-            "I want to see the filled in parameters for the movie keywords",
-            "filled in parameters for keywords of this movie",
-            "Get the parameters I filled in for query the movie's keywords"
+            "Get the parameter I make fill in for inquiry the film's keywords",
+            "parameter I satiate in for interrogation the moving pictures keywords"
           ]
         },
         "x-bot-utter": [
@@ -397,14 +389,12 @@
         },
         "x-input-template": {
           "useEndpoint": [
-            "I want to see the list of similar movies",
-            "the similar movies",
-            "Recommend similar movies"
+            "the similar film",
+            "I want to see the list of similar film"
           ],
           "parameterList": [
-            "I want to see the filled in parameters for the similar movies",
-            "filled in parameters for the list of similar movies",
-            "Get the parameters I filled in for query the similar movies"
+            "the replete in argument for the listing of similar film",
+            "Get the parameter I fill up in for inquiry the similar motion picture"
           ]
         },
         "x-bot-utter": [
