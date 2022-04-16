@@ -64,7 +64,7 @@
           ],
           "parameterList": [
             "see the satiate in argument for the popular movies",
-            "the make full in argument for the popular picture",
+            "the make full in argument for the popular picture"
           ]
         },
         "x-bot-utter": [
@@ -390,7 +390,7 @@
         "x-input-template": {
           "useEndpoint": [
             "the similar film",
-            "I want to see the list of similar film",
+            "I want to see the list of similar film"
           ],
           "parameterList": [
             "the replete in argument for the listing of similar film",
