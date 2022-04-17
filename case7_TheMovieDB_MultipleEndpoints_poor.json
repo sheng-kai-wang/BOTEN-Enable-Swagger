@@ -139,7 +139,7 @@
           ],
           "parameterList": [
             "Get the parameter I make fill in for inquiry the film detail",
-            "replete in parameter for the pic detail"
+            "the filled in parameters for the film detail"
           ]
         },
         "x-bot-utter": [
@@ -228,10 +228,10 @@
         "x-input-template": {
           "useEndpoint": [
             "the crew of this movie",
-            "the work party of this cinema"
+            "movie credits"
           ],
           "parameterList": [
-            "the full in parameters for beget the crowd of this cinema",
+            "the full in parameters for beget the film credits",
             "the satiate in argument for getting the crowd of this film"
           ]
         },
