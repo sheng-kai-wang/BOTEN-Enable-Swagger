@@ -18,11 +18,6 @@
             "I want to get detailed information about venues",
             "Get details of attractions",
             "I want to get all the information about the attraction"
-          ],
-          "parameterList": [
-            "I want to see the filled in parameters for the venue service",
-            "filled in parameters for detailed information about venues",
-            "Get the filled in Parameters to obtain all the detailed of the scenic spot"
           ]
         }
       }
@@ -96,11 +91,6 @@
             "I want to get explore about venues",
             "Get explore of attractions",
             "Search for attractions"
-          ],
-          "parameterList": [
-            "I want to see the parameters that are populated in order to get the sights",
-            "the parameters filled in to get venues",
-            "What parameters did I fill in for explore attractions"
           ]
         },
         "x-bot-utter": [
@@ -229,11 +219,6 @@
             "I want to get tips about venues",
             "Get tips of attractions",
             "Get introduction about attractions"
-          ],
-          "parameterList": [
-            "I want to see the parameters that are populated in order to get the tips of venues",
-            "the parameters filled in to get the introduction of venues",
-            "What parameters did I fill in for explore tips of attractions?"
           ]
         },
         "x-bot-utter": [
@@ -355,11 +340,6 @@
             "I want to get hours about venues",
             "Get opening time of attractions",
             "Attraction opening hours"
-          ],
-          "parameterList": [
-            "I want to see the parameters that are populated in order to get the opening time of venues",
-            "the parameters filled in to get the hours of venues",
-            "What parameters did I fill in for explore opening time of attractions?"
           ]
         },
         "x-bot-utter": [
@@ -485,11 +465,6 @@
             "I want to get next venues",
             "Get next attractions",
             "see next venues"
-          ],
-          "parameterList": [
-            "I want to see the parameters that are populated in order to get the next venues",
-            "the parameters filled in to get the next venues",
-            "What parameters did I fill in for explore the next attraction?"
           ]
         },
         "x-bot-utter": [
