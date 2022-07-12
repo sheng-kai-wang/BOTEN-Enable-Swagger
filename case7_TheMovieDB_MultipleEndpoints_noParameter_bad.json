@@ -1,0 +1,433 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "case7_The Movie DB",
+    "description": "Multiple endpoints",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://api.themoviedb.org/3"
+    }
+  ],
+  "paths": {
+    "/movie/popular": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "en-US"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          },
+          {
+            "name": "region",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": null
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to see the list of popular movies",
+            "show me the popular movies list",
+            "the movies details"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "ID",
+              "jsonPath": "$.results[*].id"
+            },
+            {
+              "title": "title",
+              "jsonPath": "$.results[*].title"
+            },
+            {
+              "title": "adult",
+              "jsonPath": "$.results[*].adult"
+            },
+            {
+              "title": "overview",
+              "jsonPath": "$.results[*].overview"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to see the list of movies details",
+            "the crew of this film",
+            "show me the movie details"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "title",
+              "jsonPath": "$.title"
+            },
+            {
+              "title": "adult",
+              "jsonPath": "$.adult"
+            },
+            {
+              "title": "overview",
+              "jsonPath": "$.overview"
+            },
+            {
+              "title": "popularity",
+              "jsonPath": "$.popularity"
+            },
+            {
+              "title": "status",
+              "jsonPath": "$.status"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}/credits": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "the film credits",
+            "keywords for this movie",
+            "I would like to know who is involved in this movie"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "name",
+              "jsonPath": "$.cast[*].name"
+            },
+            {
+              "title": "character",
+              "jsonPath": "$.cast[*].character"
+            },
+            {
+              "title": "popularity",
+              "jsonPath": "$.cast[*].popularity"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}/keywords": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "movie keywords",
+            "I want to query keywords related to this movie",
+            "Recommend similar movies"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "name",
+              "jsonPath": "$.keywords[*].name"
+            }
+          ]
+        }
+      }
+    },
+    "/movie/{movie_id}/similar": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "movie_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 399566
+          },
+          {
+            "name": "api_key",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "517d5908dfa88aafe5f32cc3a06b5841"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "x-input-template": {
+          "useEndpoint": [
+            "I want to see the list of similar movies",
+            "the similar movies",
+            "Recommend popular movies"
+          ]
+        },
+        "x-bot-utter": [
+          {
+            "parameterName": "api_key",
+            "default": "517d5908dfa88aafe5f32cc3a06b5841"
+          },
+          {
+            "parameterName": "movie_id",
+            "utter": "What movie_id do you want to search?"
+          }
+        ],
+        "x-user-entity": [
+          {
+            "parameterName": "api_key",
+            "entityValue": [
+              "517d5908dfa88aafe5f32cc3a06b5841"
+            ]
+          },
+          {
+            "parameterName": "movie_id",
+            "regex": [
+              "[0-9]{5}"
+            ],
+            "entityValue": [
+              399566,
+              791373
+            ]
+          }
+        ],
+        "x-bot-jsonpPath-result": {
+          "item": 5,
+          "result": [
+            {
+              "title": "original_title",
+              "jsonPath": "$.results[*].original_title"
+            },
+            {
+              "title": "overview",
+              "jsonPath": "$.results[*].overview"
+            },
+            {
+              "title": "release_date",
+              "jsonPath": "$.results[*].release_date"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
